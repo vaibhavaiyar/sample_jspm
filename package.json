@@ -1,0 +1,38 @@
+{
+  "name": "greet-user-sdk",
+  "description": "greet user service SDK for javascript.",
+  "private": true,
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "src"
+  },
+  "devDependencies": {
+    "jasmine": "^2.3.2",
+    "jspm": "^0.16.0",
+    "jspm-git": "^0.3.3",
+    "karma": "^0.13.9",
+    "karma-cli": "^0.1.0",
+    "karma-jasmine": "^0.3.6",
+    "karma-jspm": "^2.0.1",
+    "karma-junit-reporter": "^0.3.4",
+    "karma-sauce-launcher": "^0.2.14",
+    "karma-spec-reporter": "0.0.20"
+  },
+  "jspm": {
+    "main": "index",
+    "directories": {
+      "lib": "src"
+    },
+    "configFile": "jspm-config.js",
+    "dependencies": {
+      "aurelia-http-client": "github:aurelia/http-client@0.11.0",
+      "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.9.2"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@5.8.25",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
