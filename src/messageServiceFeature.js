@@ -3,7 +3,7 @@ import MessageServiceSdkConfig from './messageServiceSdkConfig';
 import {HttpClient} from 'aurelia-http-client'
 import MessageView from './messageView';
 
-@inject(MessageServiceSdkConfig, HttpClient)
+//@inject(MessageServiceSdkConfig, HttpClient)
 class MessageServiceFeature {
 
     _config:MessageServiceSdkConfig;

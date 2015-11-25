@@ -3,18 +3,14 @@
   <script src="jspm_packages/system.js"></script>
   <script src="jspm-config.js"></script>
   <script>
-    import MessageServiceSdk,{MessageServiceSdkConfig} from 'greet-user-sdk'
-
-const messageServiceSdkConfig = 
-    new MessageServiceSdkConfig(
-        "https://api-dev.precorconnect.com"
-    );
-
-const messageServiceSdk = 
-    new MessageServiceSdk(
-        messageServiceSdkConfig
-    );
-	
-	messageServiceSdk.hello('Vaibha');
+System.import('src/index');
+    //var messageServiceSdkConfig = new MessageServiceSdkConfig("http://localhost:8080/sample_jspm/response.json");
+    //var messageServiceSdk = new MessageServiceSdk(messageServiceSdkConfig);
+    //consle.log(messageServiceSdk.hello('Vaibhav'));
+bootstrap();
+  //   import MessageServiceSdk,{MessageServiceSdkConfig} from 'greet-user-sdk'
+  // const messageServiceSdkConfig = new MessageServiceSdkConfig("https://api-dev.precorconnect.com");
+  // const messageServiceSdk = new MessageServiceSdk(messageServiceSdkConfig);
+  // messageServiceSdk.hello('Vaibha');
   </script>
  </html>
