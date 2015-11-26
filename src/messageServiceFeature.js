@@ -1,9 +1,9 @@
 import {inject} from 'aurelia-dependency-injection';
+import {HttpClient} from 'aurelia-http-client';
 import MessageServiceSdkConfig from './messageServiceSdkConfig';
-import {HttpClient} from 'aurelia-http-client'
 import MessageView from './messageView';
 
-@inject(MessageServiceSdkConfig, HttpClient)
+//@inject(MessageServiceSdkConfig, HttpClient)
 class MessageServiceFeature {
 
     _config:MessageServiceSdkConfig;
@@ -24,24 +24,28 @@ class MessageServiceFeature {
         this._httpClient = httpClient;
     }
 
+    static inject() {
+        return [MessageServiceSdkConfig, HttpClient];
+    }
+
     /**
      * Greets user
      * @param {string} name
      * @returns a promise of {MessageView[]}
      */
-    execute(name:string):Promise<MessageView> {
+    execute(name:String):Promise<MessageView[]> {
 
         return this._httpClient
-            .createRequest('message')
+            .createRequest('users/' + name + '/repos')
             .asGet()
             .withBaseUrl(this._config.serviceApiBaseUrl)
-            //.withHeader('Authorization', `Bearer ${accessToken}`)
-            .withParams({
-                name: name
-            })
             .send()
-            .then(response => new MessageView(message)
-            );
+            .then(response =>
+                   Array.from(
+                              response.content, item =>
+                              new MessageView(item.name)
+                             )
+                 );
     }
 }
 

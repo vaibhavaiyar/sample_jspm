@@ -19,7 +19,7 @@ export default class MessageServiceSdk {
 
     }
 
-    hello(name:string):Promise<MessageView> {
+    hello(name:String):Promise<MessageView> {
 
         return this
             ._diContainer

@@ -1,5 +1,5 @@
 System.config({
-  baseURL: "/",
+  baseURL: "./",
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {
@@ -21,6 +21,10 @@ System.config({
     "core-js": "npm:core-js@1.2.6",
     "greet-user-sdk": "github:vaibhavaiyar/sample_jspm@0.1.0",
     "jwt-simple": "npm:jwt-simple@0.3.1",
+    "github:vaibhavaiyar/sample_jspm@0.1.0": {
+      "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.9.2",
+      "aurelia-http-client": "github:aurelia/http-client@0.11.0"
+    },
     "github:aurelia/dependency-injection@0.9.2": {
       "aurelia-logging": "github:aurelia/logging@0.6.4",
       "aurelia-metadata": "github:aurelia/metadata@0.7.3",
@@ -65,10 +69,6 @@ System.config({
     },
     "github:jspm/nodelibs-vm@0.1.0": {
       "vm-browserify": "npm:vm-browserify@0.0.4"
-    },
-    "github:vaibhavaiyar/sample_jspm@0.1.0": {
-      "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.9.2",
-      "aurelia-http-client": "github:aurelia/http-client@0.11.0"
     },
     "npm:asn1.js@4.0.0": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",

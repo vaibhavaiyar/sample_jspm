@@ -1,20 +1,12 @@
- <!doctype html>
- 
-  <script src="jspm_packages/system.js"></script>
-  <script src="jspm-config.js"></script>
-  <script>
-    import MessageServiceSdk,{MessageServiceSdkConfig} from 'greet-user-sdk'
-
-const messageServiceSdkConfig = 
-    new MessageServiceSdkConfig(
-        "https://api-dev.precorconnect.com"
-    );
-
-const messageServiceSdk = 
-    new MessageServiceSdk(
-        messageServiceSdkConfig
-    );
-	
-	messageServiceSdk.hello('Vaibha');
-  </script>
- </html>
+<!doctype html>
+<head>
+    <script src="jspm_packages/system.js"></script>
+    <script src="jspm-config.js"></script>
+    <script>
+        System.import('src/app');
+    </script>
+</head>
+<body>
+    <div>TESTING JSPM</div>
+</body>
+</html>

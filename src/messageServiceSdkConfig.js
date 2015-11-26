@@ -3,12 +3,12 @@
  */
 export default class MessageServiceSdkConfig {
 
-    _serviceApiBaseUrl:string;
+    _serviceApiBaseUrl:String;
 
     /**
      * @param {string} serviceApiBaseUrl
      */
-    constructor(serviceApiBaseUrl:string) {
+    constructor(serviceApiBaseUrl:String) {
 
         if (!serviceApiBaseUrl) {
             throw 'serviceApiBaseUrl required';
@@ -20,7 +20,7 @@ export default class MessageServiceSdkConfig {
     /**
      * @returns {string}
      */
-    get serviceApiBaseUrl():string {
+    get serviceApiBaseUrl():String {
         return this._serviceApiBaseUrl;
     }
 
