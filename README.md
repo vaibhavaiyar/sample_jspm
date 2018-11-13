@@ -1,2 +1,2 @@
 # sample_jspm
-Sample application 
+Sample application for testing
